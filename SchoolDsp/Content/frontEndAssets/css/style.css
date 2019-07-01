@@ -123,10 +123,12 @@ h6 {
 .float-left {
     float: left !important;
 }
+.float-right {
+    float: right !important;
+}
 /*--------------------------------------------------------------
 # Sidebar Section
 --------------------------------------------------------------*/
-
 .wrapper {
     display: flex;
     width: 100%;
@@ -136,7 +138,7 @@ h6 {
 #sidebar {
     min-width: 300px;
     max-width: 300px;
-    margin-top: 74px;
+    margin-top: 0px;
     background: #7386D5;
     color: #fff;
     transition: all 0.3s;
@@ -163,8 +165,8 @@ h6 {
 }
 
 #sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
+    padding: 7px;
+    font-size: 14px;
     display: block;
 }
 
@@ -579,9 +581,7 @@ nav #sidebarCollapse {
     padding: 10px 0;
 }
 
-#sidebar {
-    margin-top: 0px;
-}
+
 
 #header .logo h1 {
     font-size: 28px;
@@ -614,12 +614,22 @@ button #sidebarCollapse {
     display: none;
 }
 }
-
-@media(max-width:992px) {
+@media(min-width:992px) {
+    #sidebar {
+        margin-top: 0px;
+    }
+}
+@media(max-width:991px) {
+    #sidebar {
+        margin-top: -59px;
+    }
+    #sidebarCollapse{
+        margin-top:-100px !important;
+    }
 }
 @media (min-width: 1200px){
     .body-content {
-        width: 966px !important
+        width: 967px !important
     }
 }
 @media (min-width: 992px){
